@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaProductos">
+
+    <ImageButton
+        android:id="@+id/btn_cuenta2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cuenta"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_carrito2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/carrito"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_menu2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_apartados"
+        app:srcCompat="@drawable/menu"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="685dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <TextView
+            android:id="@+id/txt_precio1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="24dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/btn_prod3"
+            app:layout_constraintEnd_toStartOf="@+id/txt_precio2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nom1" />
+
+        <TextView
+            android:id="@+id/txt_precio2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="24dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/btn_prod4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_precio1"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nom2" />
+
+        <TextView
+            android:id="@+id/txt_nom3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_precio3"
+            app:layout_constraintEnd_toStartOf="@+id/txt_nom4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_prod3" />
+
+        <TextView
+            android:id="@+id/txt_nom4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_precio4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_nom3"
+            app:layout_constraintTop_toBottomOf="@+id/btn_prod4" />
+
+        <TextView
+            android:id="@+id/txt_nom2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_precio2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_nom1"
+            app:layout_constraintTop_toBottomOf="@+id/btn_prod2" />
+
+        <ImageButton
+            android:id="@+id/btn_prod1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="16dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/txt_nom1"
+            app:layout_constraintEnd_toStartOf="@+id/btn_prod2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_prod2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="16dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/txt_nom2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_prod1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_prod3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="19dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/txt_nom3"
+            app:layout_constraintEnd_toStartOf="@+id/btn_prod4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_precio1"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_prod4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="19dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/txt_nom4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_prod3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_precio2"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txt_nom1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_precio1"
+            app:layout_constraintEnd_toStartOf="@+id/txt_nom2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_prod1" />
+
+        <TextView
+            android:id="@+id/txt_precio3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="28dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_precio4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nom3" />
+
+        <TextView
+            android:id="@+id/txt_precio4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="28dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_precio3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nom4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

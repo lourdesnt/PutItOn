@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Put It On</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_ma"><b>ACCESORIOS</b></string>
+    <string name="txt_mz"><b>ZAPATOS</b></string>
+    <string name="txt_mp"><b>PANTALONES</b></string>
+    <string name="txt_ms"><b>SUDADERAS</b></string>
+    <string name="txt_ha"><b>ACCESORIOS</b></string>
+    <string name="txt_hz"><b>ZAPATOS</b></string>
+    <string name="txt_hp"><b>PANTALONES</b></string>
+    <string name="txt_hs"><b>SUDADERAS</b></string>
+</resources>
