@@ -1,13 +1,18 @@
 package com.example.putiton;
 
+import static clases.Catalogo.catalogo;
 import static clases.Catalogo.getImageId;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -19,6 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 import basededatos.AdminSQLiteOpenHelper;
 import clases.Producto;
@@ -36,6 +43,7 @@ public class InfoProducto extends AppCompatActivity {
     private String tallaSeleccionada;
     private int cantidadSeleccionada;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,15 +67,21 @@ public class InfoProducto extends AppCompatActivity {
         nombre.setText(productoSeleccionado.getNombre());
         precio.setText(Double.toString(productoSeleccionado.getPrecio())+" €");
         referencia.setText("Ref.: "+Integer.toString(productoSeleccionado.getReferencia()));
-        imagen.setImageResource(getImageId(productoSeleccionado.getImagen()));
-        tallaSeleccionada = sp_tallas.getSelectedItem().toString();
-        cantidadSeleccionada = Integer.parseInt(et_cantidad.getText().toString());
+        imagen.setImageResource(getImageId(catalogo.stream().filter(p->p.getNombre().equals(productoSeleccionado.getNombre())).findFirst().get().getImagen()));
 
+
+    }
+
+    public void goToListaProductos(View view){
+        finish();
     }
 
     public void aniadirAlCarrito(View view){
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
+
+        tallaSeleccionada = sp_tallas.getSelectedItem().toString();
+        cantidadSeleccionada = Integer.parseInt(et_cantidad.getText().toString());
 
         int referencia = productoSeleccionado.getReferencia();
         String nombre = productoSeleccionado.getNombre();
@@ -88,11 +102,36 @@ public class InfoProducto extends AppCompatActivity {
         registro.put("talla", talla);
         registro.put("cantidad", cantidad);
 
-        db.insert("productos", null, registro);
-        db.close();
+        if(findById(referencia)==null) {
+            db.insert("productos", null, registro);
 
-        Toast.makeText(this, "Producto añadido al carrito", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Producto añadido al carrito", Toast.LENGTH_SHORT).show();
+        } else {
+            db.update("productos", registro, "referencia=" + referencia, null);
+
+            Toast.makeText(this, "Producto del carrito modificado", Toast.LENGTH_SHORT).show();
+        }
     }
 
+    public Producto findById(int id) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+
+        Producto productoAEncontrar = null;
+
+        String selectQuery = "SELECT * FROM productos WHERE referencia = " + id;
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+        if (cursor.getCount()>0) {
+            productoAEncontrar = new Producto();
+            productoAEncontrar.setReferencia(cursor.getInt(0));
+            productoAEncontrar.setNombre(cursor.getString(1));
+            productoAEncontrar.setPrecio(cursor.getDouble(2));
+            productoAEncontrar.setTalla(cursor.getString(3));
+            productoAEncontrar.setCantidad(cursor.getInt(4));
+        }
+
+        return productoAEncontrar;
+    }
 
 }

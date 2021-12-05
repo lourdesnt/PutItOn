@@ -7,16 +7,16 @@
     tools:context=".ListaProductos">
 
     <ImageButton
-        android:id="@+id/btn_cuenta2"
+        android:id="@+id/btn_home2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="130dp"
         android:layout_marginBottom="16dp"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/cuenta"
+        app:layout_constraintStart_toEndOf="@+id/btn_carrito2"
+        app:srcCompat="@drawable/home"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -26,6 +26,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="16dp"
         android:background="@null"
+        android:onClick="goToCarrito"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,13 +37,13 @@
         android:id="@+id/btn_menu2"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="16dp"
         android:background="@null"
+        android:onClick="goToMenu"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tab_apartados"
         app:srcCompat="@drawable/menu"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -50,89 +51,72 @@
         android:id="@+id/scrollView2"
         android:layout_width="409dp"
         android:layout_height="685dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
 
         <TextView
             android:id="@+id/txt_precio1"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="33dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="7dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/btn_prod3"
-            app:layout_constraintEnd_toStartOf="@+id/txt_precio2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_nom1" />
 
         <TextView
             android:id="@+id/txt_precio2"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="24dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/btn_prod4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txt_precio1"
             app:layout_constraintTop_toBottomOf="@+id/txt_nom2" />
 
         <TextView
             android:id="@+id/txt_nom3"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="33dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:text="TextView"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_precio3"
-            app:layout_constraintEnd_toStartOf="@+id/txt_nom4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_prod3" />
 
         <TextView
             android:id="@+id/txt_nom4"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="10dp"
             android:text="TextView"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_precio4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txt_nom3"
             app:layout_constraintTop_toBottomOf="@+id/btn_prod4" />
 
         <TextView
             android:id="@+id/txt_nom2"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="10dp"
             android:text="TextView"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_precio2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txt_nom1"
             app:layout_constraintTop_toBottomOf="@+id/btn_prod2" />
 
         <ImageButton
             android:id="@+id/btn_prod1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="157dp"
+            android:layout_height="225dp"
             android:layout_marginStart="33dp"
-            android:layout_marginTop="46dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="33dp"
             android:background="@null"
             android:onClick="goToProducto1"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/txt_nom1"
-            app:layout_constraintEnd_toStartOf="@+id/btn_prod2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_background"
@@ -140,33 +124,27 @@
 
         <ImageButton
             android:id="@+id/btn_prod2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="46dp"
+            android:layout_width="157dp"
+            android:layout_height="225dp"
+            android:layout_marginTop="33dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="16dp"
             android:background="@null"
             android:onClick="goToProducto2"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/txt_nom2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_prod1"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_background"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btn_prod3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="157dp"
+            android:layout_height="225dp"
             android:layout_marginStart="33dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="19dp"
+            android:layout_marginTop="16dp"
             android:background="@null"
             android:onClick="goToProducto3"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/txt_nom3"
-            app:layout_constraintEnd_toStartOf="@+id/btn_prod4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_precio1"
             app:srcCompat="@drawable/ic_launcher_background"
@@ -174,57 +152,47 @@
 
         <ImageButton
             android:id="@+id/btn_prod4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="157dp"
+            android:layout_height="225dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="19dp"
             android:background="@null"
             android:onClick="goToProducto4"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/txt_nom4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_prod3"
             app:layout_constraintTop_toBottomOf="@+id/txt_precio2"
             app:srcCompat="@drawable/ic_launcher_background"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/txt_nom1"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="33dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:text="TextView"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_precio1"
-            app:layout_constraintEnd_toStartOf="@+id/txt_nom2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_prod1" />
 
         <TextView
             android:id="@+id/txt_precio3"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="33dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginTop="8dp"
             android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txt_precio4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_nom3" />
 
         <TextView
             android:id="@+id/txt_precio4"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="28dp"
             android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txt_precio3"
             app:layout_constraintTop_toBottomOf="@+id/txt_nom4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

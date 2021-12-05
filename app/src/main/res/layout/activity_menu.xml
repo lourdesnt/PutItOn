@@ -8,11 +8,8 @@
 
     <TabHost
         android:id="@+id/tab_apartados"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_menu"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="411dp"
+        android:layout_height="682dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -67,12 +64,11 @@
         android:id="@+id/btn_menu"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="30dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tab_apartados"
         app:srcCompat="@drawable/menu"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -82,25 +78,25 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="3dp"
         android:background="@null"
         android:onClick="goToCarrito"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_apartados"
         app:srcCompat="@drawable/carrito"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ImageButton
-        android:id="@+id/btn_cuenta"
+        android:id="@+id/btn_home"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="3dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/cuenta"
+        app:layout_constraintStart_toEndOf="@+id/btn_carrito"
+        app:layout_constraintTop_toBottomOf="@+id/tab_apartados"
+        app:srcCompat="@drawable/home"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

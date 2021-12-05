@@ -42,6 +42,7 @@ public class ListaProductos extends AppCompatActivity {
     private ImageButton producto2;
     private ImageButton producto3;
     private ImageButton producto4;
+    private ProductosLista lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class ListaProductos extends AppCompatActivity {
         producto3 = (ImageButton) findViewById(R.id.btn_prod3);
         producto4 = (ImageButton) findViewById(R.id.btn_prod4);
 
-        ProductosLista lista = (ProductosLista) getIntent().getSerializableExtra("productos");
+        lista = (ProductosLista) getIntent().getSerializableExtra("productos");
 
         producto1.setImageResource(getImageId(lista.getProductosSeleccionados().get(0).getImagen()));
         nombre1.setText(lista.getProductosSeleccionados().get(0).getNombre());
@@ -80,7 +81,7 @@ public class ListaProductos extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void goToProducto1(View view){
         Intent i = new Intent(this, InfoProducto.class);
-        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre1)).findFirst().get();
+        Producto productoSeleccionado = lista.getProductosSeleccionados().get(0);
         i.putExtra("productoSeleccionado", productoSeleccionado);
         startActivity(i);
     }
@@ -88,7 +89,7 @@ public class ListaProductos extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void goToProducto2(View view){
         Intent i = new Intent(this, InfoProducto.class);
-        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre2)).findFirst().get();
+        Producto productoSeleccionado = lista.getProductosSeleccionados().get(1);
         i.putExtra("productoSeleccionado", productoSeleccionado);
         startActivity(i);
     }
@@ -96,7 +97,7 @@ public class ListaProductos extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void goToProducto3(View view){
         Intent i = new Intent(this, InfoProducto.class);
-        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre3)).findFirst().get();
+        Producto productoSeleccionado = lista.getProductosSeleccionados().get(2);
         i.putExtra("productoSeleccionado", productoSeleccionado);
         startActivity(i);
     }
@@ -104,10 +105,18 @@ public class ListaProductos extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void goToProducto4(View view){
         Intent i = new Intent(this, InfoProducto.class);
-        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre4)).findFirst().get();
+        Producto productoSeleccionado = lista.getProductosSeleccionados().get(3);
         i.putExtra("productoSeleccionado", productoSeleccionado);
         startActivity(i);
     }
 
+    public void goToMenu(View view){
+        finish();
+    }
+
+    public void goToCarrito(View view){
+        Intent i = new Intent(this, Carrito.class);
+        startActivity(i);
+    }
 
 }
