@@ -10,13 +10,13 @@
         android:id="@+id/btn_menu3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="3dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginBottom="14dp"
         android:background="@null"
         android:onClick="goToMenu"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:srcCompat="@drawable/menu"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -25,12 +25,12 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginBottom="14dp"
         android:background="@null"
         android:onClick="goToCarrito"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:srcCompat="@drawable/carrito"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -39,11 +39,13 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="14dp"
         android:background="@null"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_menu3"
         app:layout_constraintStart_toEndOf="@+id/btn_carrito3"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:srcCompat="@drawable/home"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -54,5 +56,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/portada"
+            android:layout_width="392dp"
+            android:layout_height="656dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/portada" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

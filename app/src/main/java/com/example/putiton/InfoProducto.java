@@ -68,7 +68,9 @@ public class InfoProducto extends AppCompatActivity {
         precio.setText(Double.toString(productoSeleccionado.getPrecio())+" €");
         referencia.setText("Ref.: "+Integer.toString(productoSeleccionado.getReferencia()));
         imagen.setImageResource(getImageId(catalogo.stream().filter(p->p.getNombre().equals(productoSeleccionado.getNombre())).findFirst().get().getImagen()));
-
+        if(productoSeleccionado.getCantidad()!=0){
+            et_cantidad.setText(String.valueOf(productoSeleccionado.getCantidad()));
+        }
 
     }
 

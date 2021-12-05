@@ -119,4 +119,9 @@ public class ListaProductos extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void goToHome(View view){
+        Intent i = new Intent(this, Home.class);
+        startActivity(i);
+    }
+
 }
