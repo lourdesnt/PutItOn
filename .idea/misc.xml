@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_carrito.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_info_producto.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_lista_productos.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_menu.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_mujer_ropa.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_apartados_ropa.xml" value="0.25" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_apartados_ropa_h.xml" value="0.2006340579710145" />

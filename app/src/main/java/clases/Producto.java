@@ -8,6 +8,11 @@ public class Producto implements Serializable {
     private String nombre;
     private String talla;
     private double precio;
+    private int cantidad;
+
+    public Producto(){
+
+    }
 
     public Producto(int referencia, int imagen, String nombre, double precio) {
         this.referencia = referencia;
@@ -56,6 +61,12 @@ public class Producto implements Serializable {
         this.precio = precio;
     }
 
+    public int getCantidad() {
+        return cantidad;
+    }
 
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 
 }

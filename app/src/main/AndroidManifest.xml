@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PutItOn">
         <activity
+            android:name=".Carrito"
+            android:exported="true" />
+        <activity
+            android:name=".InfoProducto"
+            android:exported="true" />
+        <activity
             android:name=".ListaProductos"
             android:exported="true" />
         <activity
-            android:name=".Home"
+            android:name=".Menu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

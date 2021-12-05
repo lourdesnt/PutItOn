@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".Menu">
 
     <TabHost
         android:id="@+id/tab_apartados"
@@ -84,6 +84,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="16dp"
         android:background="@null"
+        android:onClick="goToCarrito"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

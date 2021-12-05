@@ -1,16 +1,21 @@
 package com.example.putiton;
 
+import static clases.Catalogo.catalogo;
 import static clases.Catalogo.getImageId;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -18,6 +23,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import clases.Producto;
 import clases.ProductosLista;
@@ -69,6 +75,38 @@ public class ListaProductos extends AppCompatActivity {
         producto4.setImageResource(getImageId(lista.getProductosSeleccionados().get(3).getImagen()));
         nombre4.setText(lista.getProductosSeleccionados().get(3).getNombre());
         precio4.setText(Double.toString(lista.getProductosSeleccionados().get(3).getPrecio())+" €");
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void goToProducto1(View view){
+        Intent i = new Intent(this, InfoProducto.class);
+        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre1)).findFirst().get();
+        i.putExtra("productoSeleccionado", productoSeleccionado);
+        startActivity(i);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void goToProducto2(View view){
+        Intent i = new Intent(this, InfoProducto.class);
+        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre2)).findFirst().get();
+        i.putExtra("productoSeleccionado", productoSeleccionado);
+        startActivity(i);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void goToProducto3(View view){
+        Intent i = new Intent(this, InfoProducto.class);
+        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre3)).findFirst().get();
+        i.putExtra("productoSeleccionado", productoSeleccionado);
+        startActivity(i);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void goToProducto4(View view){
+        Intent i = new Intent(this, InfoProducto.class);
+        Producto productoSeleccionado = catalogo.stream().filter(p -> p.getNombre().equals(nombre4)).findFirst().get();
+        i.putExtra("productoSeleccionado", productoSeleccionado);
+        startActivity(i);
     }
 
 
