@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -39,6 +40,7 @@ public class InfoProducto extends AppCompatActivity {
     private TextView referencia;
     private ImageView imagen;
     private EditText et_cantidad;
+    private Button btn_aniadir;
     private Producto productoSeleccionado;
     private String tallaSeleccionada;
     private int cantidadSeleccionada;
@@ -55,6 +57,7 @@ public class InfoProducto extends AppCompatActivity {
         referencia = (TextView) findViewById(R.id.txt_ref);
         imagen = (ImageView) findViewById(R.id.img_prod);
         et_cantidad = (EditText) findViewById(R.id.num_cant);
+        btn_aniadir = (Button) findViewById(R.id.btn_aniadir);
 
         String[] tallas = {"XS", "S", "M", "L", "XL"};
 
@@ -70,6 +73,8 @@ public class InfoProducto extends AppCompatActivity {
         imagen.setImageResource(getImageId(catalogo.stream().filter(p->p.getNombre().equals(productoSeleccionado.getNombre())).findFirst().get().getImagen()));
         if(productoSeleccionado.getCantidad()!=0){
             et_cantidad.setText(String.valueOf(productoSeleccionado.getCantidad()));
+        } else {
+            et_cantidad.setText("0");
         }
 
     }
@@ -92,6 +97,11 @@ public class InfoProducto extends AppCompatActivity {
 
         if(tallaSeleccionada.isEmpty()){
             Toast.makeText(this, "Debes seleccionar una talla", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(cantidadSeleccionada==0){
+            Toast.makeText(this, "Debes seleccionar una cantidad", Toast.LENGTH_SHORT).show();
             return;
         }
 

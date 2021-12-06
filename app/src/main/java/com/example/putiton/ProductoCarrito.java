@@ -15,6 +15,7 @@ import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -42,6 +43,7 @@ public class ProductoCarrito extends Fragment {
     private ImageView imagen;
     private ImageButton modificar;
     private ImageButton eliminar;
+    Button buy;
 
     public Producto getProducto() {
         return producto;
@@ -83,7 +85,7 @@ public class ProductoCarrito extends Fragment {
         imagen = (ImageView) view.findViewById(R.id.img_prod_c);
         modificar = (ImageButton) view.findViewById(R.id.btn_modificar);
         eliminar = (ImageButton) view.findViewById(R.id.btn_eliminar);
-
+        buy = view.findViewById(R.id.btn_comprar);
         nombre.setText(getProducto().getNombre());
         talla.setText(getProducto().getTalla());
         precio.setText((getProducto().getPrecio()*getProducto().getCantidad())+" €");
@@ -110,6 +112,7 @@ public class ProductoCarrito extends Fragment {
             public void onClick(View view) {
                 Eliminar(view, getProducto());
                 getFragmentManager().beginTransaction().remove(f).commit();
+                ((Carrito) getActivity()).onResume();
             }
         });
 
@@ -122,7 +125,7 @@ public class ProductoCarrito extends Fragment {
 
         int referencia = p.getReferencia();
 
-        int c = db.delete("productos", "referencia = "+referencia, null);
+        db.delete("productos", "referencia = "+referencia, null);
     }
 
 

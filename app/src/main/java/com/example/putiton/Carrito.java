@@ -1,19 +1,26 @@
 package com.example.putiton;
 
+import static clases.Catalogo.catalogo;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import basededatos.AdminSQLiteOpenHelper;
 import clases.Catalogo;
@@ -23,23 +30,29 @@ import clases.ProductosLista;
 public class Carrito extends AppCompatActivity {
 
     LinearLayout listaCarrito;
+    Button btn_comprar;
+
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrito);
         listaCarrito = findViewById(R.id.listaCarrito);
+        btn_comprar = (Button) findViewById(R.id.btn_comprar);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         listaCarrito.removeAllViews();
-        List<Producto> productosCarrito = findAll();
+        List<Producto> productosCarrito = findAll(this);
+        if(findAll(this).isEmpty()){
+            btn_comprar.setEnabled(false);
+        }
         for (Producto p : productosCarrito) {
                 ProductoCarrito pc = ProductoCarrito.newInstance(p);
                 FrameLayout fr = new FrameLayout(this);
-                fr.setId(productosCarrito.indexOf(p));
+                fr.setId(productosCarrito.indexOf(p)+1);
                 getFragmentManager().beginTransaction().add(fr.getId(), pc).commit();
                 listaCarrito.addView(fr);
         }
@@ -49,8 +62,17 @@ public class Carrito extends AppCompatActivity {
         finish();
     }
 
-    public ArrayList<Producto> findAll() {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void goToConfirmar(View view){
+        Intent i = new Intent(view.getContext(), FormularioCompra.class);
+        List<Producto> compra = findAll(view.getContext());
+        compra.forEach(c-> Toast.makeText(this, c.getNombre(), Toast.LENGTH_SHORT).show());
+        i.putExtra("compra", new ProductosLista(compra));
+        startActivity(i);
+    }
+
+    public static ArrayList<Producto> findAll(Context context) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(context, "administracion", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
         ArrayList<Producto> productosCarrito = new ArrayList<Producto>();
@@ -71,4 +93,5 @@ public class Carrito extends AppCompatActivity {
 
         return productosCarrito;
     }
+
 }

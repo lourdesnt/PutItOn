@@ -2,10 +2,6 @@
     <string name="app_name">Put It On</string>
     <string name="title_activity_home">Home</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_ma"><b>ACCESORIOS</b></string>
     <string name="txt_mz"><b>ZAPATOS</b></string>
     <string name="txt_mp"><b>PANTALONES</b></string>
@@ -14,4 +10,16 @@
     <string name="txt_hz"><b>ZAPATOS</b></string>
     <string name="txt_hp"><b>PANTALONES</b></string>
     <string name="txt_hs"><b>SUDADERAS</b></string>
+    <string name="txt_form"><b>Rellene el formulario con los datos para el envío</b></string>
+    <string name="et_nombre">Nombre y Apellidos</string>
+    <string name="et_direccion">Dirección</string>
+    <string name="et_cp">C.P.</string>
+    <string name="et_ciudad">Ciudad</string>
+    <string name="et_telefono">Teléfono</string>
+    <string name="et_email">Email</string>
+    <string name="txt_pago">Elija el método de pago:</string>
+    <string name="btn_pago1">Efectivo</string>
+    <string name="btn_pago2">Tarjeta</string>
+    <string name="btn_confirmar">Confirmar compra</string>
+    <string name="txt_total"><b>TOTAL:</b></string>
 </resources>
