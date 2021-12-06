@@ -43,7 +43,6 @@ public class ProductoCarrito extends Fragment {
     private ImageView imagen;
     private ImageButton modificar;
     private ImageButton eliminar;
-    Button buy;
 
     public Producto getProducto() {
         return producto;
@@ -85,7 +84,7 @@ public class ProductoCarrito extends Fragment {
         imagen = (ImageView) view.findViewById(R.id.img_prod_c);
         modificar = (ImageButton) view.findViewById(R.id.btn_modificar);
         eliminar = (ImageButton) view.findViewById(R.id.btn_eliminar);
-        buy = view.findViewById(R.id.btn_comprar);
+
         nombre.setText(getProducto().getNombre());
         talla.setText(getProducto().getTalla());
         precio.setText((getProducto().getPrecio()*getProducto().getCantidad())+" €");

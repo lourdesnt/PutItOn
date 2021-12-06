@@ -10,6 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +34,7 @@ public class Carrito extends AppCompatActivity {
     LinearLayout listaCarrito;
     Button btn_comprar;
 
+
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,8 @@ public class Carrito extends AppCompatActivity {
         setContentView(R.layout.activity_carrito);
         listaCarrito = findViewById(R.id.listaCarrito);
         btn_comprar = (Button) findViewById(R.id.btn_comprar);
+
+
     }
 
     @Override
@@ -66,7 +71,6 @@ public class Carrito extends AppCompatActivity {
     public void goToConfirmar(View view){
         Intent i = new Intent(view.getContext(), FormularioCompra.class);
         List<Producto> compra = findAll(view.getContext());
-        compra.forEach(c-> Toast.makeText(this, c.getNombre(), Toast.LENGTH_SHORT).show());
         i.putExtra("compra", new ProductosLista(compra));
         startActivity(i);
     }

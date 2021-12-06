@@ -11,7 +11,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.AudioManager;
 import android.media.Image;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -44,6 +46,7 @@ public class InfoProducto extends AppCompatActivity {
     private Producto productoSeleccionado;
     private String tallaSeleccionada;
     private int cantidadSeleccionada;
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
