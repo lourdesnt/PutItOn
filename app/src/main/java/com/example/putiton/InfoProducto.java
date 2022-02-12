@@ -29,6 +29,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import basededatos.AdminSQLiteOpenHelper;
 import clases.Producto;
@@ -46,6 +47,7 @@ public class InfoProducto extends AppCompatActivity {
     private Producto productoSeleccionado;
     private String tallaSeleccionada;
     private int cantidadSeleccionada;
+    AdminSQLiteOpenHelper admin;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -70,7 +72,11 @@ public class InfoProducto extends AppCompatActivity {
 
         productoSeleccionado = (Producto) getIntent().getSerializableExtra("productoSeleccionado");
 
-        nombre.setText(productoSeleccionado.getNombre());
+        if(Locale.getDefault().getLanguage().equals("en")){
+            nombre.setText(productoSeleccionado.getName());
+        } else {
+            nombre.setText(productoSeleccionado.getNombre());
+        }
         precio.setText(Double.toString(productoSeleccionado.getPrecio())+" €");
         referencia.setText("Ref.: "+Integer.toString(productoSeleccionado.getReferencia()));
         imagen.setImageResource(getImageId(catalogo.stream().filter(p->p.getNombre().equals(productoSeleccionado.getNombre())).findFirst().get().getImagen()));
@@ -87,23 +93,31 @@ public class InfoProducto extends AppCompatActivity {
     }
 
     public void aniadirAlCarrito(View view){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
-        SQLiteDatabase db = admin.getWritableDatabase();
+        SQLiteDatabase db = admin.getInstance(this).getWritableDatabase();
 
         tallaSeleccionada = sp_tallas.getSelectedItem().toString();
         cantidadSeleccionada = Integer.parseInt(et_cantidad.getText().toString());
 
         int referencia = productoSeleccionado.getReferencia();
         String nombre = productoSeleccionado.getNombre();
+        String name = productoSeleccionado.getName();
         double precio = productoSeleccionado.getPrecio();
         int cantidad = cantidadSeleccionada;
 
         if(tallaSeleccionada.isEmpty()){
+            if(Locale.getDefault().getLanguage().equals("en")) {
+                Toast.makeText(this, "You must choose a size", Toast.LENGTH_SHORT).show();
+                return;
+            }
             Toast.makeText(this, "Debes seleccionar una talla", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(cantidadSeleccionada==0){
+            if(Locale.getDefault().getLanguage().equals("en")) {
+                Toast.makeText(this, "You must choose a quantity", Toast.LENGTH_SHORT).show();
+                return;
+            }
             Toast.makeText(this, "Debes seleccionar una cantidad", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -113,6 +127,7 @@ public class InfoProducto extends AppCompatActivity {
         ContentValues registro = new ContentValues();
         registro.put("referencia", referencia);
         registro.put("nombre", nombre);
+        registro.put("name", name);
         registro.put("precio", precio);
         registro.put("talla", talla);
         registro.put("cantidad", cantidad);
@@ -120,17 +135,24 @@ public class InfoProducto extends AppCompatActivity {
         if(findById(referencia)==null) {
             db.insert("productos", null, registro);
 
+            if(Locale.getDefault().getLanguage().equals("en")) {
+                Toast.makeText(this, "Product added to the cart", Toast.LENGTH_SHORT).show();
+                return;
+            }
             Toast.makeText(this, "Producto añadido al carrito", Toast.LENGTH_SHORT).show();
         } else {
             db.update("productos", registro, "referencia=" + referencia, null);
 
+            if(Locale.getDefault().getLanguage().equals("en")) {
+                Toast.makeText(this, "Product of the cart modified", Toast.LENGTH_SHORT).show();
+                return;
+            }
             Toast.makeText(this, "Producto del carrito modificado", Toast.LENGTH_SHORT).show();
         }
     }
 
     public Producto findById(int id) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
-        SQLiteDatabase db = admin.getWritableDatabase();
+        SQLiteDatabase db = admin.getInstance(this).getWritableDatabase();
 
         Producto productoAEncontrar = null;
 
@@ -141,9 +163,10 @@ public class InfoProducto extends AppCompatActivity {
             productoAEncontrar = new Producto();
             productoAEncontrar.setReferencia(cursor.getInt(0));
             productoAEncontrar.setNombre(cursor.getString(1));
-            productoAEncontrar.setPrecio(cursor.getDouble(2));
-            productoAEncontrar.setTalla(cursor.getString(3));
-            productoAEncontrar.setCantidad(cursor.getInt(4));
+            productoAEncontrar.setName(cursor.getString(2));
+            productoAEncontrar.setPrecio(cursor.getDouble(3));
+            productoAEncontrar.setTalla(cursor.getString(4));
+            productoAEncontrar.setCantidad(cursor.getInt(5));
         }
 
         return productoAEncontrar;

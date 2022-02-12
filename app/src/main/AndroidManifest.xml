@@ -10,8 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PutItOn">
         <activity
+            android:name=".Perfil"
+            android:exported="true"
+            android:theme="@style/Theme.CustomTheme"/>
+        <activity
+            android:name=".Registro"
+            android:exported="true"/>
+        <activity
+            android:name=".AreaCliente"
+            android:exported="true"/>
+        <activity
             android:name=".FormularioCompra"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Home"
             android:exported="true">
@@ -23,16 +33,16 @@
         </activity>
         <activity
             android:name=".Carrito"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".InfoProducto"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".ListaProductos"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Menu"
-            android:exported="true" />
+            android:exported="true"/>
     </application>
 
 </manifest>

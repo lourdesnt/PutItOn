@@ -1,10 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.PutItOn" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!--No Action Bar-->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="actionBarSize">0dp</item>
+    <style name="Theme.CustomTheme" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/black</item>
@@ -16,9 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="actionOverflowButtonStyle">@style/MyTheme</item>
+        <item name="actionOverflowButtonStyle">@style/MyThemeCustom</item>
     </style>
-    <style name="MyTheme" parent="android:style/Widget.Holo.ActionButton.Overflow">
+    <style name="MyThemeCustom" parent="android:style/Widget.Holo.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_baseline_login_24</item>
     </style>
 </resources>

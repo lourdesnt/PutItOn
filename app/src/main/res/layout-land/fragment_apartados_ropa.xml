@@ -9,10 +9,10 @@
 
     <ImageButton
         android:id="@+id/btn_ms"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/mujersudaderas"
@@ -22,14 +22,14 @@
 
     <ImageButton
         android:id="@+id/btn_mp"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/mujerpantalones"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_ms"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -37,7 +37,7 @@
         android:id="@+id/txt_ms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="20dp"
         android:text="@string/txt_ms"
         android:textSize="20sp"
@@ -48,48 +48,48 @@
         android:id="@+id/txt_mp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="41dp"
         android:text="@string/txt_mp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_ms"
         app:layout_constraintTop_toBottomOf="@+id/btn_mp" />
 
     <ImageButton
         android:id="@+id/btn_mz"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/mujerzapatos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ms"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ma"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txt_mz"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
-        android:layout_marginStart="55dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="87dp"
         android:text="@string/txt_mz"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt_ma"
         app:layout_constraintTop_toBottomOf="@+id/btn_mz" />
 
     <ImageButton
         android:id="@+id/btn_ma"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="70dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/mujeraccesorios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_mp"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="60dp"
         android:text="@string/txt_ma"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

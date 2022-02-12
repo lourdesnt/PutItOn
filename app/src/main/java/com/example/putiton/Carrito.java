@@ -76,7 +76,7 @@ public class Carrito extends AppCompatActivity {
     }
 
     public static ArrayList<Producto> findAll(Context context) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(context, "administracion", null, 1);
+        AdminSQLiteOpenHelper admin = AdminSQLiteOpenHelper.getInstance(context);
         SQLiteDatabase db = admin.getWritableDatabase();
 
         ArrayList<Producto> productosCarrito = new ArrayList<Producto>();
@@ -88,9 +88,10 @@ public class Carrito extends AppCompatActivity {
                 Producto p = new Producto();
                 p.setReferencia(cursor.getInt(0));
                 p.setNombre(cursor.getString(1));
-                p.setPrecio(cursor.getDouble(2));
-                p.setTalla(cursor.getString(3));
-                p.setCantidad(cursor.getInt(4));
+                p.setName(cursor.getString(2));
+                p.setPrecio(cursor.getDouble(3));
+                p.setTalla(cursor.getString(4));
+                p.setCantidad(cursor.getInt(5));
                 productosCarrito.add(p);
             } while (cursor.moveToNext());
         }

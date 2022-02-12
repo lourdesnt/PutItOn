@@ -3,18 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_area_cliente.xml" value="0.18" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_carrito.xml" value="0.14858906525573193" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_formulario_compra.xml" value="0.22" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_info_producto.xml" value="0.22" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_lista_productos.xml" value="0.22" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_menu.xml" value="0.18" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/activity_registro.xml" value="0.22" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/fragment_apartados_ropa.xml" value="0.25" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/fragment_apartados_ropa_h.xml" value="0.25" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout-land/fragment_producto_carrito.xml" value="0.25" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_area_cliente.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_carrito.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_formulario_compra.xml" value="0.25" />
-        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_home.xml" value="0.18" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_info_producto.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_lista_productos.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_menu.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_mujer_ropa.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_perfil.xml" value="0.2" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/activity_registro.xml" value="0.18" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/carrito_producto.xml" value="0.19655797101449277" />
-        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_apartados_ropa.xml" value="0.25" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_apartados_ropa.xml" value="0.18" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_apartados_ropa_h.xml" value="0.2006340579710145" />
-        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_producto_carrito.xml" value="0.33" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/layout/fragment_producto_carrito.xml" value="0.25" />
         <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/lourd/AndroidStudioProjects/PutItOn/app/src/main/res/menu/overflow.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

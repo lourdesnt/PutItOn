@@ -22,11 +22,11 @@
 
     <ImageView
         android:id="@+id/img_prod"
-        android:layout_width="235dp"
-        android:layout_height="413dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="79dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="160dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="46dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
@@ -34,50 +34,50 @@
         android:id="@+id/txt_nom"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="86dp"
         android:text="TextView"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_precio"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_precio"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="86dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/txt_ref"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nom" />
 
     <TextView
         android:id="@+id/txt_ref"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="86dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/sp_tallas"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_precio" />
 
     <Spinner
         android:id="@+id/sp_tallas"
         android:layout_width="109dp"
         android:layout_height="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_aniadir"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_cantidad"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ref"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btn_aniadir"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="273dp"
+        android:layout_marginEnd="272dp"
+        android:layout_marginBottom="30dp"
         android:onClick="aniadirAlCarrito"
         android:text="@string/btn_aniadir"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,22 +88,22 @@
         android:id="@+id/txt_cantidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/txt_cantidad"
-        app:layout_constraintBottom_toTopOf="@+id/btn_aniadir"
-        app:layout_constraintEnd_toStartOf="@+id/num_cant" />
+        app:layout_constraintEnd_toStartOf="@+id/num_cant"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ref" />
 
     <EditText
         android:id="@+id/num_cant"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="85dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btn_aniadir"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ref"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

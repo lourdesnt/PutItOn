@@ -7,10 +7,10 @@
     tools:context=".Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="392dp"
-        android:layout_height="794dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_menu3"
+        android:layout_width="827dp"
+        android:layout_height="334dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_carrito3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,11 +21,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="114dp"
             android:layout_marginEnd="112dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="40dp"
             android:onClick="goToArea"
             android:text="@string/btnCliente"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -34,7 +35,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="16dp"
         android:background="@null"
         android:onClick="goToMenu"
         android:scaleType="fitCenter"
@@ -48,7 +49,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="16dp"
         android:background="@null"
         android:onClick="goToCarrito"
         android:scaleType="fitCenter"
@@ -61,9 +62,9 @@
         android:id="@+id/btn_home3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginEnd="339dp"
+        android:layout_marginBottom="16dp"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"

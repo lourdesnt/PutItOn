@@ -22,4 +22,23 @@
     <string name="btn_pago2">Tarjeta</string>
     <string name="btn_confirmar">Confirmar compra</string>
     <string name="txt_total"><b>TOTAL:</b></string>
+    <string name="btnCliente">Área de cliente</string>
+    <string name="txt_iniciarsesion">Iniciar sesión</string>
+    <string name="txt_usuario">Usuario</string>
+    <string name="et_usuario">Usuario</string>
+    <string name="txt_contrasena">Contraseña</string>
+    <string name="et_contrasena">Contraseña</string>
+    <string name="txt_cuenta">¿No tienes cuenta?</string>
+    <string name="btn_registrar">Registrarse</string>
+    <string name="txt_error">Error al introducir los datos</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="txt_registrar">Registrarse</string>
+    <string name="txt_correo">Correo electrónico</string>
+    <string name="et_correo">Correo electrónico</string>
+    <string name="txt_error2">El usuario ya existe</string>
+    <string name="btn_registro">Registro</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="btn_aniadir">Añadir al carrito</string>
+    <string name="txt_cantidad">Cantidad:</string>
+    <string name="btn_comprar">Comprar</string>
 </resources>

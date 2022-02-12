@@ -9,10 +9,10 @@
 
     <ImageButton
         android:id="@+id/btn_hs"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/hombresudaderas"
@@ -22,84 +22,84 @@
 
     <ImageButton
         android:id="@+id/btn_hp"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/hombrepantalones"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_hs"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/btn_hz"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/hombrezapatos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hs"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ha"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/btn_ha"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="109dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="70dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/hombreaccesorios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hp"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txt_hs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="20dp"
         android:text="@string/txt_hs"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/btn_hs"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hs"  />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hs" />
 
     <TextView
         android:id="@+id/txt_hp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="20dp"
         android:text="@string/txt_hp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_hp"
-        app:layout_constraintTop_toTopOf="@id/btn_hp" />
+        app:layout_constraintStart_toEndOf="@+id/txt_hs"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hp" />
 
     <TextView
         android:id="@+id/txt_hz"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="86dp"
         android:text="@string/txt_hz"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt_ha"
         app:layout_constraintTop_toBottomOf="@+id/btn_hz" />
 
     <TextView
         android:id="@+id/txt_ha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
         android:text="@string/txt_ha"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_ha"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_ha" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,4 +23,9 @@ public class Home extends AppCompatActivity {
         Intent i = new Intent(this, Menu.class);
         startActivity(i);
     }
+
+    public void goToArea(View view){
+        Intent i = new Intent(this, AreaCliente.class);
+        startActivity(i);
+    }
 }

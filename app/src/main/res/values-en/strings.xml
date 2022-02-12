@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Put It On</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="txt_ma"><b>ACCESSORIES</b></string>
+    <string name="txt_mz"><b>SHOES</b></string>
+    <string name="txt_mp"><b>TROUSERS</b></string>
+    <string name="txt_ms"><b>SWEATSHIRTS</b></string>
+    <string name="txt_ha"><b>ACCESSORIES</b></string>
+    <string name="txt_hz"><b>SHOES</b></string>
+    <string name="txt_hp"><b>TROUSERS</b></string>
+    <string name="txt_hs"><b>SWEATSHIRTS</b></string>
+    <string name="txt_form"><b>Fill in the form with your personal data for the shipment</b></string>
+    <string name="et_nombre">Name and last name</string>
+    <string name="et_direccion">Address</string>
+    <string name="et_cp">Postal Code</string>
+    <string name="et_ciudad">City</string>
+    <string name="et_telefono">Phone </string>
+    <string name="et_email">Email</string>
+    <string name="txt_pago">Choose a payment method:</string>
+    <string name="btn_pago1">Cash</string>
+    <string name="btn_pago2">Credit card</string>
+    <string name="btn_confirmar">Confirm purchase</string>
+    <string name="txt_total"><b>TOTAL:</b></string>
+    <string name="btnCliente">Client area</string>
+    <string name="txt_iniciarsesion">Log in</string>
+    <string name="txt_usuario">User</string>
+    <string name="et_usuario">User</string>
+    <string name="txt_contrasena">Password</string>
+    <string name="et_contrasena">Password</string>
+    <string name="txt_cuenta">Does not have an account?</string>
+    <string name="btn_registrar">Sign in</string>
+    <string name="txt_error">Error introducing data</string>
+    <string name="btn_entrar">Log in</string>
+    <string name="txt_registrar">Sign in</string>
+    <string name="txt_correo">Email</string>
+    <string name="et_correo">Email</string>
+    <string name="txt_error2">The user already exists</string>
+    <string name="btn_registro">Sign in</string>
+    <string name="logout">Log out</string>
+    <string name="btn_aniadir">Add to cart</string>
+    <string name="txt_cantidad">Quantity:</string>
+    <string name="btn_comprar">Purchase</string>
+</resources>

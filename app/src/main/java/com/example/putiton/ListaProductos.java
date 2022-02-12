@@ -1,29 +1,18 @@
 package com.example.putiton;
 
-import static clases.Catalogo.catalogo;
 import static clases.Catalogo.getImageId;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Locale;
 
 import clases.Producto;
 import clases.ProductosLista;
@@ -65,16 +54,32 @@ public class ListaProductos extends AppCompatActivity {
         lista = (ProductosLista) getIntent().getSerializableExtra("productos");
 
         producto1.setImageResource(getImageId(lista.getProductosSeleccionados().get(0).getImagen()));
-        nombre1.setText(lista.getProductosSeleccionados().get(0).getNombre());
+        if(Locale.getDefault().getLanguage().equals("en")){
+            nombre1.setText(lista.getProductosSeleccionados().get(0).getName());
+        } else {
+            nombre1.setText(lista.getProductosSeleccionados().get(0).getNombre());
+        }
         precio1.setText(Double.toString(lista.getProductosSeleccionados().get(1).getPrecio())+" €");
         producto2.setImageResource(getImageId(lista.getProductosSeleccionados().get(1).getImagen()));
-        nombre2.setText(lista.getProductosSeleccionados().get(1).getNombre());
+        if(Locale.getDefault().getLanguage().equals("en")){
+            nombre2.setText(lista.getProductosSeleccionados().get(1).getName());
+        } else {
+            nombre2.setText(lista.getProductosSeleccionados().get(1).getNombre());
+        }
         precio2.setText(Double.toString(lista.getProductosSeleccionados().get(2).getPrecio())+" €");
         producto3.setImageResource(getImageId(lista.getProductosSeleccionados().get(2).getImagen()));
-        nombre3.setText(lista.getProductosSeleccionados().get(2).getNombre());
+        if(Locale.getDefault().getLanguage().equals("en")){
+            nombre3.setText(lista.getProductosSeleccionados().get(2).getName());
+        } else {
+            nombre3.setText(lista.getProductosSeleccionados().get(2).getNombre());
+        }
         precio3.setText(Double.toString(lista.getProductosSeleccionados().get(3).getPrecio())+" €");
         producto4.setImageResource(getImageId(lista.getProductosSeleccionados().get(3).getImagen()));
-        nombre4.setText(lista.getProductosSeleccionados().get(3).getNombre());
+        if(Locale.getDefault().getLanguage().equals("en")){
+            nombre4.setText(lista.getProductosSeleccionados().get(3).getName());
+        } else {
+            nombre4.setText(lista.getProductosSeleccionados().get(3).getNombre());
+        }
         precio4.setText(Double.toString(lista.getProductosSeleccionados().get(3).getPrecio())+" €");
     }
 

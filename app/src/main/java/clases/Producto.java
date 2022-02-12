@@ -1,11 +1,17 @@
 package clases;
 
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.os.Build;
+
 import java.io.Serializable;
+import java.util.Locale;
 
 public class Producto implements Serializable {
     private int referencia;
     private int imagen;
     private String nombre;
+    private String name;
     private String talla;
     private double precio;
     private int cantidad;
@@ -14,10 +20,11 @@ public class Producto implements Serializable {
 
     }
 
-    public Producto(int referencia, int imagen, String nombre, double precio) {
+    public Producto(int referencia, int imagen, String nombre, String name, double precio) {
         this.referencia = referencia;
         this.imagen = imagen;
         this.nombre = nombre;
+        this.name = name;
         this.precio = precio;
     }
 
@@ -45,6 +52,14 @@ public class Producto implements Serializable {
         this.nombre = nombre;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getTalla() {
         return talla;
     }
@@ -68,5 +83,6 @@ public class Producto implements Serializable {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
 
 }

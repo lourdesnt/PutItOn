@@ -3,20 +3,14 @@ package com.example.putiton;
 import static clases.Catalogo.catalogo;
 import static clases.Catalogo.getImageId;
 
-import android.content.ContentValues;
+import android.app.Fragment;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
-
-import android.app.Fragment;
-
-import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,14 +18,10 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
-import org.w3c.dom.Text;
-
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Locale;
 
 import basededatos.AdminSQLiteOpenHelper;
 import clases.Producto;
-import clases.ProductosLista;
 
 public class ProductoCarrito extends Fragment {
 
@@ -85,7 +75,11 @@ public class ProductoCarrito extends Fragment {
         modificar = (ImageButton) view.findViewById(R.id.btn_modificar);
         eliminar = (ImageButton) view.findViewById(R.id.btn_eliminar);
 
-        nombre.setText(getProducto().getNombre());
+        if(Locale.getDefault().getLanguage().equals("en")) {
+            nombre.setText(getProducto().getName());
+        } else {
+            nombre.setText(getProducto().getNombre());
+        }
         talla.setText(getProducto().getTalla());
         precio.setText((getProducto().getPrecio()*getProducto().getCantidad())+" €");
         cantidad.setText(String.valueOf(getProducto().getCantidad()));
@@ -119,7 +113,7 @@ public class ProductoCarrito extends Fragment {
     }
 
     public void Eliminar(View view, Producto p){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(view.getContext(), "administracion", null, 1);
+        AdminSQLiteOpenHelper admin = AdminSQLiteOpenHelper.getInstance(view.getContext());
         SQLiteDatabase db = admin.getWritableDatabase();
 
         int referencia = p.getReferencia();
