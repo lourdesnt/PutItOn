@@ -41,4 +41,5 @@
     <string name="btn_aniadir">Añadir al carrito</string>
     <string name="txt_cantidad">Cantidad:</string>
     <string name="btn_comprar">Comprar</string>
+    <string name="txt_outfit">¡Enséñanos tu OUTFIT del día!</string>
 </resources>
