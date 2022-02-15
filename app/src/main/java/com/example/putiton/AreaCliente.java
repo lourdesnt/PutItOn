@@ -85,7 +85,7 @@ public class AreaCliente extends AppCompatActivity {
     }
 
     public void goToPerfil(View view){
-        if(findByUsername(et_usuario.getText().toString())){
+        if(findUser(et_usuario.getText().toString(), et_contrasena.getText().toString())){
             Intent i = new Intent(this, Perfil.class);
             i.putExtra("nombreUsuario", et_usuario.getText().toString());
             startActivity(i);
@@ -103,10 +103,10 @@ public class AreaCliente extends AppCompatActivity {
         startActivity(i);
     }
 
-    public boolean findByUsername(String username) {
+    public boolean findUser(String username, String password) {
         SQLiteDatabase db = adminUser.getInstance(this).getWritableDatabase();
 
-        String selectQuery = "SELECT * FROM usuarios WHERE nombre = " + "'"+username+"'";
+        String selectQuery = "SELECT * FROM usuarios WHERE nombre = " + "'"+username+"'" + "and contrasena = " + "'"+password+"'";
         Cursor cursor = db.rawQuery(selectQuery, null);
         cursor.moveToFirst();
         if (cursor.getCount()>0) {
