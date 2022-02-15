@@ -61,7 +61,7 @@
 
     <TextView
         android:id="@+id/txt_hs"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:layout_marginTop="20dp"
@@ -72,7 +72,7 @@
 
     <TextView
         android:id="@+id/txt_hp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
 
     <TextView
         android:id="@+id/txt_hz"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="27dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="86dp"
@@ -94,7 +94,7 @@
 
     <TextView
         android:id="@+id/txt_ha"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="60dp"

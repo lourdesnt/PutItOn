@@ -44,20 +44,23 @@
 
         <TextView
             android:id="@+id/txt_usuario"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="31dp"
-            android:layout_marginEnd="269dp"
+            android:layout_marginEnd="260dp"
             android:text="@string/txt_usuario"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_iniciarsesion" />
 
         <EditText
             android:id="@+id/et_usuario"
             android:layout_width="264dp"
             android:layout_height="48dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="74dp"
             android:background="@color/white"
@@ -65,24 +68,28 @@
             android:hint="@string/et_usuario"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_usuario" />
 
         <TextView
             android:id="@+id/txt_contrasena"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="37dp"
-            android:layout_marginEnd="239dp"
+            android:layout_marginEnd="230dp"
             android:text="@string/txt_contrasena"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_usuario" />
 
         <EditText
             android:id="@+id/et_contrasena"
             android:layout_width="264dp"
             android:layout_height="48dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="74dp"
             android:background="@color/white"
@@ -90,6 +97,7 @@
             android:hint="@string/et_contrasena"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_contrasena" />
 
         <TextView
@@ -118,11 +126,13 @@
             android:id="@+id/btn_entrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="112dp"
             android:layout_marginEnd="149dp"
             android:onClick="goToPerfil"
             android:text="@string/btn_entrar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_contrasena" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
