@@ -43,4 +43,5 @@
     <string name="txt_cantidad">Quantity:</string>
     <string name="btn_comprar">Purchase</string>
     <string name="txt_outfit">Show us your OUTFIT of the day!</string>
+    <string name="txt_c">Quantity:</string>
 </resources>
